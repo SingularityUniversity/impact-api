@@ -1,0 +1,19 @@
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.035) SHOW FULL TABLES; args=None
+(0.014) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/loader.py", line 76, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list))
+TemplateDoesNotExist: index.html

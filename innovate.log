@@ -1,0 +1,86 @@
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.028) SHOW FULL TABLES; args=None
+(0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+Internal Server Error: /register
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 340, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 396, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'compress'
+Internal Server Error: /register
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/compressor/templatetags/compress.py", line 191, in compress
+    nodelist = parser.parse(('endcompress',))
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 349, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/usr/local/lib/python2.7/site-packages/django/template/debug.py", line 65, in unclosed_block_tag
+    raise self.source_error(source, msg)
+TemplateSyntaxError: Unclosed tag 'compress'. Looking for one of: endcompress 
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.032) SHOW FULL TABLES; args=None
+(0.016) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

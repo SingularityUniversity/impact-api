@@ -1,0 +1,10 @@
+.error_message {
+color: red;
+}
+.navbar-header {
+background-color: rgb(63,81,181)
+}
+
+md-content h1{
+color: rgb(63,81,181)
+}

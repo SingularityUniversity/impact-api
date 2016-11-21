@@ -1,0 +1,27 @@
+(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.072) SHOW FULL TABLES; args=None
+(0.029) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/Users/Kwasi/PycharmProjects/django_env/lib/python2.7/site-packages/django/template/loader.py", line 76, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list))
+TemplateDoesNotExist: index.html
+(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.004) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.026) SHOW FULL TABLES; args=None
+(0.010) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+(0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'c8vsgis3nxoa6whjrdhi3iyzii9t0m1m' AND `django_session`.`expire_date` > '2016-11-16 22:35:55.193393'); args=('c8vsgis3nxoa6whjrdhi3iyzii9t0m1m', u'2016-11-16 22:35:55.193393')
+(0.010) SELECT `authentication_account`.`id`, `authentication_account`.`password`, `authentication_account`.`last_login`, `authentication_account`.`email`, `authentication_account`.`first_name`, `authentication_account`.`last_name`, `authentication_account`.`is_admin`, `authentication_account`.`is_staff`, `authentication_account`.`created_at`, `authentication_account`.`updated_at` FROM `authentication_account` WHERE `authentication_account`.`id` = 1; args=(1,)

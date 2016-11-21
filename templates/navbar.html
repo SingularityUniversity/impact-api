@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default" role="navigation"
+     data-ng-controller="NavbarController as vm">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#mysite-nav">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">My Site</a>
+    </div> <!-- ./navbar-header -->
+
+    <div class="collapse navbar-collapse" id="mysite-nav">
+      <ul class="nav navbar-nav pull-right">
+        <li><a href="/aboutUs">About Us</a></li>
+        <li><a href="/firstPage">1</a></li>
+        <li><a href="/secondPage">2</a></li>
+        <li><a href="/thirdPage">3</a></li>
+        <li><a href="/fourthPage">4</a></li>
+        <li>test: {{ vm.test }}</li>
+        {% if user.is_authenticated %}
+          <li><a href="/+{{ user.email }}">+{{ user.email }}</a></li>
+          <li><a href="/+{{ user.email }}/settings">Settings</a></li>
+          <li><a href="javascript:void(0)" data-ng-click="vm.logout()">Logout
+          </a></li>
+        {% else %}
+
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+        {% endif %}
+      </ul>
+    </div> <!-- /.collapse.navbar-collapse -->
+  </div> <!-- /.container-fluid -->
+</nav>
+

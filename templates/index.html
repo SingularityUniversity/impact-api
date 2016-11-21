@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="" lang="en" dir="ltr">
+<head>
+<title>MySite</title>
+<base href="/" />
+  {% include 'stylesheets.html' %}
+  {% load static %}
+  <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body data-ng-app="myApp">
+  {% include 'navbar.html' %}
+    <div class="row">
+      <div class="large-12 columns ui-view"></div>
+    </div>
+   {% include 'javascripts.html' %}
+
+  </body>
+</html>
