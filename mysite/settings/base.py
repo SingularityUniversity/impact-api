@@ -6,6 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
+SECRET_KEY = 'Impactc7g9z+z*uevw=bl-!5p)h+@@5o&ouxr*s$jg@z6_)*_w@1zgp-'
 
 # Application definition
 
@@ -17,8 +18,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',
-    'authentication',
-    'polls',
+    'mysite',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,6 +79,17 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ['DW_RDS_DB_NAME'],
+        'USER': os.environ['DW_RDS_USERNAME'],
+        'PASSWORD': os.environ['DW_RDS_PASSWORD'],
+        'HOST': os.environ['DW_RDS_HOSTNAME'],
+        'PORT': os.environ['DW_RDS_PORT'],
+    }
+}
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -90,4 +101,4 @@ REST_FRAMEWORK = {
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Authentication
-AUTH_USER_MODEL = 'authentication.Account'
+# AUTH_USER_MODEL = 'authentication.Account'

@@ -19,5 +19,8 @@ staticfiles/
 # Bower modules
 static/bower_components
 
+#log files
+mysite.log
+
 #Idea
 .idea

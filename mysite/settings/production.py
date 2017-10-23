@@ -10,18 +10,6 @@ DJANGO_ROOT = '/usr/local/lib/python2.7/site-packages/django/'
 ALLOWED_HOSTS = ['*']
 
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'organizers',
-        'USER': 'root',
-    }
-}
-
-
 COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 
