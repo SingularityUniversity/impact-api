@@ -23,6 +23,9 @@ urlpatterns = [
     url(r'^json/initiatives', views.initiatives_json, name='initiatives_json'),
     url(r'^excel/initiatives', views.initiatives_excel, name='initiatives_excel'),
 
+    url(r'^api/filtered_initiatives', views.filtered_initiatives, name='filtered_initiatives'),
+    url(r'^json/filtered_initiatives', views.filtered_initiatives_json, name='filtered_initiatives_json'),
+
     url(r'^api/contacts', views.contacts, name='contacts'),
     url(r'^json/contacts', views.contacts_json, name='contacts_json'),
     url(r'^excel/contacts', views.contacts_excel, name='contacts_excel'),

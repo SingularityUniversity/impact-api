@@ -27,6 +27,15 @@ def initiatives_json(request):
     return sql_to_downloadable_json_response(initiatives_dict, 'initiatives')
 
 
+def filtered_initiatives(request):
+    initiatives_dict = create_filtered_initiatives_dict()
+    return JsonResponse(initiatives_dict)
+
+def filtered_initiatives_json(request):
+    initiatives_dict = create_filtered_initiatives_dict()
+    return sql_to_downloadable_json_response(initiatives_dict, 'initiatives')
+
+
 def initiatives_excel(request):
     column_names = ['Name', 'Category', 'Program']
     sql_columns_needed = ('name', 'impact_initiative_type', 'program_affiliation')

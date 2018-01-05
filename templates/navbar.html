@@ -14,11 +14,7 @@
 
     <div class="collapse navbar-collapse" id="mysite-nav">
       <ul class="nav navbar-nav pull-right">
-        <li><a href="/aboutUs">About Us</a></li>
-        <li><a href="/firstPage">1</a></li>
-        <li><a href="/secondPage">2</a></li>
-        <li><a href="/thirdPage">3</a></li>
-        <li><a href="/fourthPage">4</a></li>
+
         <li>test: {{ vm.test }}</li>
         {% if user.is_authenticated %}
           <li><a href="/+{{ user.email }}">+{{ user.email }}</a></li>
