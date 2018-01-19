@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
-SECRET_KEY = 'Impactc7g9z+z*uevw=bl-!5p)h+@@5o&ouxr*s$jg@z6_)*_w@1zgp-'
+SECRET_KEY = os.environ['IMP_API_SECRET']
 
 # Application definition
 
